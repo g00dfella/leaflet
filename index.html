@@ -24,7 +24,7 @@
     options: {
         iconSize:     [50, 50],
         iconAnchor:   [22, 94],
-        popupAnchor:  [0, -20]
+        popupAnchor:  [5, -55]
     }
 });
 
@@ -33,16 +33,57 @@ var luxoftIcon = new LeafIcon({iconUrl: 'Luxoft.png'}),
 	eyIcon = new LeafIcon({iconUrl: 'EY.png'}),
 	cognianceIcon = new LeafIcon({iconUrl: 'Cogniance.png'}),
     glIcon = new LeafIcon({iconUrl: 'GL.png'});
-	
-	L.icon = function (options) {
-    return new L.Icon(options);
-};
 
-L.marker([50.450243,30.410366], {icon: luxoftIcon}).addTo(map).bindPopup('<img src="Luxoft.png"/> <br><strong>Contacts:</strong> <br>10/14 Radisheva Str., building B <br>Tel: 044 238 81 08 <br>Web: <a href="http://luxoft.com?TheLinkURL" target="_blank">www.luxoft.com</a>');
-L.marker([50.422848,30.505052], {icon: ciklumIcon}).addTo(map).bindPopup('<img src="Ciklum.png"/> <br><strong>Contacts:</strong> <br>12 Amosova Str., <br>Tel: 044 545 77 45 <br>Web: <a href="http://ciklum.com?TheLinkURL" target="_blank">www.ciklum.com</a>');
-L.marker([50.447115,30.523558], {icon: eyIcon}).addTo(map).bindPopup('<img src="EY.png"/> <br><strong>Contacts:</strong> <br>19A Khreschatyk Str., <br>Tel: 044 490 30 00 <br>Web: <a href="http://ey.com?TheLinkURL" target="_blank">www.ey.com</a>');
-L.marker([50.41455,30.519610], {icon: cognianceIcon}).addTo(map).bindPopup('<img src="Cogniance.png"/> <br><strong>Contacts:</strong> <br>86O Malevycha (Bozhenka) <br>Tel: 044 351 19 39 <br>Web: <a href="http://cogniance.com?TheLinkURL" target="_blank">www.cogniance.com</a>');
-L.marker([50.424711,30.506512], {icon: glIcon}).addTo(map).bindPopup('<img src="GL.png"/> <br><strong>Contacts:</strong> <br>2/1 Mykoly Grinchenka <br>Tel: 044 492 96 93 <br>Web: <a href="http://globallogic.com?TheLinkURL" target="_blank">www.globallogic.com</a>');
+var marker1 = L.marker([50.450243,30.410366], {icon: luxoftIcon}).addTo(map).bindPopup('<img src="Luxoft.png"/> <br><strong>Contacts:</strong> <br>10/14 Radisheva Str., building B <br>Tel: 044 238 81 08 <br>Web: <a href="http://luxoft.com?TheLinkURL" target="_blank">www.luxoft.com</a>');
+var marker2 = L.marker([50.422848,30.505052], {icon: ciklumIcon}).addTo(map).bindPopup('<img src="Ciklum.png"/> <br><strong>Contacts:</strong> <br>12 Amosova Str., <br>Tel: 044 545 77 45 <br>Web: <a href="http://ciklum.com?TheLinkURL" target="_blank">www.ciklum.com</a>');
+var marker3 = L.marker([50.447115,30.523558], {icon: eyIcon}).addTo(map).bindPopup('<img src="EY.png"/> <br><strong>Contacts:</strong> <br>19A Khreschatyk Str., <br>Tel: 044 490 30 00 <br>Web: <a href="http://ey.com?TheLinkURL" target="_blank">www.ey.com</a>');
+var marker4 = L.marker([50.41455,30.519610], {icon: cognianceIcon}).addTo(map).bindPopup('<img src="Cogniance.png"/> <br><strong>Contacts:</strong> <br>86O Malevycha (Bozhenka) <br>Tel: 044 351 19 39 <br>Web: <a href="http://cogniance.com?TheLinkURL" target="_blank">www.cogniance.com</a>');
+var marker5 = L.marker([50.424711,30.506512], {icon: glIcon}).addTo(map).bindPopup('<img src="GL.png"/> <br><strong>Contacts:</strong> <br>2/1 Mykoly Grinchenka <br>Tel: 044 492 96 93 <br>Web: <a href="http://globallogic.com?TheLinkURL" target="_blank">www.globallogic.com</a>');
+ 
+function onMarker1Click(e) {
+    marker1.setOpacity(0);
+}
+
+marker1.on('click', onMarker1Click);
+marker1.on('popupclose', function(e) {
+e.popup._source.setOpacity(1);
+});
+
+function onMarker2Click(e) {
+    marker2.setOpacity(0);
+}
+
+marker2.on('click', onMarker2Click);
+marker2.on('popupclose', function(e) {
+e.popup._source.setOpacity(1);
+});
+
+function onMarker3Click(e) {
+    marker3.setOpacity(0);
+}
+
+marker3.on('click', onMarker3Click);
+marker3.on('popupclose', function(e) {
+e.popup._source.setOpacity(1);
+});
+
+function onMarker4Click(e) {
+    marker4.setOpacity(0);
+}
+
+marker4.on('click', onMarker4Click);
+marker4.on('popupclose', function(e) {
+e.popup._source.setOpacity(1);
+});
+
+function onMarker5Click(e) {
+    marker5.setOpacity(0);
+}
+
+marker5.on('click', onMarker5Click);
+marker5.on('popupclose', function(e) {
+e.popup._source.setOpacity(1);
+});
  
  }
  </script>
